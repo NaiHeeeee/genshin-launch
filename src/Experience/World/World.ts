@@ -65,7 +65,7 @@ export default class World extends kokomi.Component {
       this.fc = new ForwardCamera(this.base);
       this.fc.addExisting();
 
-      await kokomi.sleep(2000);
+      await kokomi.sleep(1000);
 
       document.querySelector(".loader-screen")?.classList.add("hollow");
 
@@ -76,7 +76,7 @@ export default class World extends kokomi.Component {
       this.bgm = bgm;
       bgm.play();
 
-      await kokomi.sleep(2000);
+      await kokomi.sleep(1000);
 
       document.querySelector(".menu")?.classList.remove("hidden");
 
