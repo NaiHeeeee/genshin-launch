@@ -4,7 +4,7 @@
 
 body {
   margin: 0;
-  cursor: url("/Genshin/Img/T_Mouse.png"), default;
+  cursor: url("/Genshin/T_Mouse.png"), default;
 }
 
 .hollow {
@@ -154,7 +154,7 @@ body {
       var(--loading-element-progress-color)
   );
   transform: rotateZ(0);
-  background: url("/Genshin/Img/Elements.png") no-repeat left 100%;
+  background: url("/Genshin/Elements.png") no-repeat left 100%;
   background-size: var(--loading-element-width) var(--loading-element-height);
   background-position-x: 0;
   /* animation: loading-element 3.5s infinite forwards; */

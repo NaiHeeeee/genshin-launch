@@ -138,7 +138,6 @@ export default class World extends kokomi.Component {
   }
   // 进游戏后随便做做啥
   async startGame() {
-    //console.log("原神，启动！");
 
     // 卡半岩，诶嘿
     document.querySelector(".loading-element")?.classList.remove("hollow");
@@ -156,8 +155,6 @@ export default class World extends kokomi.Component {
     });
 
     await kokomi.sleep(10000);
-
-    //alert("没错，你卡了");
 
     progressTween.pause();
     gsap.to(rule, {
