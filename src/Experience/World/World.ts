@@ -165,6 +165,6 @@ export default class World extends kokomi.Component {
     await kokomi.sleep(2000);
     
     //跳转浙江农林大学官网
-    window.location.href = "https://zafu.edu.cn";
+    window.location.replace("https://zafu.edu.cn");
   }
 }
