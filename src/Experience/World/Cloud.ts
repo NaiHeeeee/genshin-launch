@@ -6,7 +6,7 @@ import type Experience from "../Experience";
 import cloudVertexShader from "../Shaders/Cloud/vert.glsl";
 import cloudFragmentShader from "../Shaders/Cloud/frag.glsl";
 
-import { meshList } from "../Data/cloud";
+import {meshList} from "../Data/cloud";
 import config from "../config";
 
 export default class Cloud extends kokomi.Component {
@@ -67,12 +67,11 @@ export default class Cloud extends kokomi.Component {
     });
     this.material = material;
 
-    const instancedMesh = new THREE.InstancedMesh(
-      geometry,
-      material,
-      meshInfos.length
+    this.instancedMesh = new THREE.InstancedMesh(
+        geometry,
+        material,
+        meshInfos.length
     );
-    this.instancedMesh = instancedMesh;
     this.instancedMesh.frustumCulled = false;
 
     this.createDebug();

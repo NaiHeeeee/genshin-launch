@@ -5,12 +5,12 @@ import gsap from "gsap";
 
 import type Experience from "./Experience";
 
-import BloomTranstionEffect from "./Effects/BloomTranstionEffect";
+import BloomTransitionEffect from "./Effects/BloomTransitionEffect.ts";
 
 export default class Postprocessing extends kokomi.Component {
   declare base: Experience;
   params;
-  bt: BloomTranstionEffect;
+  bt: BloomTransitionEffect;
   dof: POSTPROCESSING.DepthOfFieldEffect;
   constructor(base: Experience) {
     super(base);
@@ -34,7 +34,7 @@ export default class Postprocessing extends kokomi.Component {
       new POSTPROCESSING.RenderPass(this.base.scene, this.base.camera)
     );
 
-    const bt = new BloomTranstionEffect({
+    const bt = new BloomTransitionEffect({
       intensity: this.params.bloomTransitionIntensity,
       whiteAlpha: this.params.bloomTransitionWhiteAlpha,
     });

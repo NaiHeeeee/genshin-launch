@@ -7,7 +7,7 @@ import type Experience from "../Experience";
 import polarLightVertexShader from "../Shaders/PolarLight/vert.glsl";
 import polarLightFragmentShader from "../Shaders/PolarLight/frag.glsl";
 
-import { meshList } from "../Data/polarLight";
+import {meshList} from "../Data/polarLight";
 import config from "../config";
 
 export default class PolarLight extends kokomi.Component {
@@ -64,12 +64,11 @@ export default class PolarLight extends kokomi.Component {
     });
     this.material = material;
 
-    const instancedMesh = new THREE.InstancedMesh(
-      geometry,
-      material,
-      meshInfos.length
+    this.instancedMesh = new THREE.InstancedMesh(
+        geometry,
+        material,
+        meshInfos.length
     );
-    this.instancedMesh = instancedMesh;
     this.instancedMesh.frustumCulled = false;
   }
   addExisting(): void {

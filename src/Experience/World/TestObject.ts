@@ -27,8 +27,7 @@ export default class TestObject extends kokomi.Component {
       fragmentShader: testObjectFragmentShader,
     });
     this.material = material;
-    const mesh = new THREE.Mesh(geometry, material);
-    this.mesh = mesh;
+    this.mesh = new THREE.Mesh(geometry, material);
 
     const uj = new kokomi.UniformInjector(this.base);
     this.uj = uj;

@@ -30,8 +30,7 @@ export default class HashFog extends kokomi.Component {
     });
     this.material = material;
 
-    const mesh = new THREE.Mesh(geometry, material);
-    this.mesh = mesh;
+    this.mesh = new THREE.Mesh(geometry, material);
     this.mesh.position.z = -400;
     this.mesh.frustumCulled = false;
   }

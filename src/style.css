@@ -147,7 +147,7 @@ body {
   top: var(--loading-element-img-top);
   left: 0;
   /* width: var(--loading-element-progress); */
-  width: 0%;
+  width: 0;
   height: 100%;
   filter: drop-shadow(
     0 var(--loading-element-shadow-offset) 0

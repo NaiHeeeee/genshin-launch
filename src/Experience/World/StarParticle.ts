@@ -50,8 +50,7 @@ export default class StarParticle extends kokomi.Component {
     });
     this.material = material;
 
-    const points = new THREE.Points(geometry, material);
-    this.points = points;
+    this.points = new THREE.Points(geometry, material);
     this.points.position.set(0, 0, -1000);
     this.points.frustumCulled = false;
   }

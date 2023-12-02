@@ -5,7 +5,7 @@ import gsap from "gsap";
 
 import type Experience from "../Experience";
 
-import { getToonMaterialDoor, getToonMaterialRoad } from "../utils";
+import {getToonMaterialDoor, getToonMaterialRoad} from "../utils";
 
 export default class Road extends kokomi.Component {
   declare base: Experience;
@@ -28,8 +28,7 @@ export default class Road extends kokomi.Component {
       if (obj.isMesh) {
         obj.receiveShadow = true;
         const material = obj.material as THREE.MeshStandardMaterial;
-        const toonMaterial = getToonMaterialRoad(material, this.base.renderer);
-        obj.material = toonMaterial;
+        obj.material = getToonMaterialRoad(material, this.base.renderer);
         obj.frustumCulled = false;
       }
     });
@@ -113,8 +112,7 @@ export default class Road extends kokomi.Component {
         obj.receiveShadow = true;
         obj.castShadow = true;
         const material = obj.material as THREE.MeshStandardMaterial;
-        const toonMaterial = getToonMaterialDoor(material);
-        obj.material = toonMaterial;
+        obj.material = getToonMaterialDoor(material);
         obj.frustumCulled = false;
       }
     });
@@ -130,12 +128,11 @@ export default class Road extends kokomi.Component {
     this.emit("door-comeout");
 
     // 门的动画分成2个部分：合成门、开门。前者播放完后我们要先暂停它
-    const animations = new kokomi.AnimationManager(
-      this.base,
-      model.animations,
-      model.scene
+    this.animations = new kokomi.AnimationManager(
+        this.base,
+        model.animations,
+        model.scene
     );
-    this.animations = animations;
     for (const action of Object.values(this.animations.actions)) {
       action.setLoop(THREE.LoopOnce, 1);
       action.play();

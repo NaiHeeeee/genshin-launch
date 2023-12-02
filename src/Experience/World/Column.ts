@@ -5,8 +5,8 @@ import ky from "kyouka";
 
 import type Experience from "../Experience";
 
-import { meshList } from "../Data/column";
-import { getToonMaterialColumn } from "../utils";
+import {meshList} from "../Data/column";
+import {getToonMaterialColumn} from "../utils";
 import config from "../config";
 
 export default class Column extends kokomi.Component {
@@ -49,8 +49,7 @@ export default class Column extends kokomi.Component {
       meshList: [],
     }));
 
-    const uj = new kokomi.UniformInjector(this.base);
-    this.uj = uj;
+    this.uj = new kokomi.UniformInjector(this.base);
 
     this.instanceInfos.forEach((item) => {
       const model = this.base.am.items[item.object] as STDLIB.GLTF;

@@ -134,7 +134,7 @@ export default class World extends kokomi.Component {
 
     await kokomi.sleep(2000);
 
-    this.startGame();
+    await this.startGame();
   }
   // 进游戏后随便做做啥
   async startGame() {
@@ -165,6 +165,6 @@ export default class World extends kokomi.Component {
     await kokomi.sleep(2000);
     
     //跳转浙江农林大学官网
-    window.location.href = "https://zafu.edu.cn";
+    window.location.replace("https://zafu.edu.cn");
   }
 }
