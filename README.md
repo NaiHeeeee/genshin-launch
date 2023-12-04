@@ -1,4 +1,4 @@
-# 原神启动复刻
+# 原神启动
 
 修改自[genshin-replica](https://github.com/alphardex/genshin-replica)
 
